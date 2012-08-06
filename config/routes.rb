@@ -1,4 +1,6 @@
 Zonazero::Application.routes.draw do
+  resources :awards
+
   resources :works
 
   ActiveAdmin.routes(self)
