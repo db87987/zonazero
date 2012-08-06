@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120806061916) do
+ActiveRecord::Schema.define(:version => 20120806085023) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -48,15 +48,21 @@ ActiveRecord::Schema.define(:version => 20120806061916) do
 
   create_table "clients", :force => true do |t|
     t.string   "title"
-    t.string   "logo1"
-    t.string   "logo2"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.string   "point1"
     t.string   "point2"
     t.string   "point3"
     t.string   "point4"
     t.string   "point5"
+    t.string   "logo1_file_name"
+    t.string   "logo1_content_type"
+    t.integer  "logo1_file_size"
+    t.datetime "logo1_updated_at"
+    t.string   "logo2_file_name"
+    t.string   "logo2_content_type"
+    t.integer  "logo2_file_size"
+    t.datetime "logo2_updated_at"
   end
 
   create_table "users", :force => true do |t|

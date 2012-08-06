@@ -9,7 +9,6 @@
 Client.transaction do
   (1..25).each do |i|
     Client.create(title: "Клиент #{i}", 
-      logo1: "client-1.png", logo2: "client-3.png",
       point1: "– Разработка марочного наименования",
       point2: "– Проектирование товарного знака и фирменного стиля",
       point3: "– Программа продвижения",
