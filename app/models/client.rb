@@ -11,7 +11,7 @@ class Client < ActiveRecord::Base
                     :path => ":rails_root/public/assets/clients/:id/:style/:basename.:extension"
                                  }
 
-validates_attachment_presence :logo1
+
 validates_attachment_size :logo1, :less_than => 5.megabytes
 validates_attachment_content_type :logo1, :content_type => ['image/jpeg', 'image/png']
 end
