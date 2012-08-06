@@ -8,6 +8,7 @@ ActiveAdmin.register Client do
     column :point3
     column :point4
     column :point5
+    default_actions
   end
 
   form :html => { :enctype => "multipart/form-data" } do |f|

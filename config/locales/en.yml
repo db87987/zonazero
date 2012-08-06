@@ -1,4 +1,17 @@
 en:
+  activerecord:
+   models:
+    client:
+       one: "Клиент"
+       other: "Клиенты"
+   attributes:
+     client:
+       title: "Имя"
+       point1: "Пункт 1"
+       point2: "Пункт 2"
+       point3: "Пункт 3"
+       point4: "Пункт 4"
+       point5: "Пункт 5"
   active_admin:
     dashboard: Панель управления
     dashboard_welcome:
