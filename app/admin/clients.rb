@@ -1,7 +1,8 @@
 ActiveAdmin.register Client do
 
 
-   index do
+   index do 
+    column :id, :order => "id ASC"
     column :title
     column :point1
     column :point2

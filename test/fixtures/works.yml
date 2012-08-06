@@ -3,11 +3,11 @@
 one:
   title: MyString
   description: MyText
-  logo1: MyString
-  logo2: MyString
+  logo1: 
+  logo2: 
 
 two:
   title: MyString
   description: MyText
-  logo1: MyString
-  logo2: MyString
+  logo1: 
+  logo2: 

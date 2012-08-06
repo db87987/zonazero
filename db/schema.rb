@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120806085023) do
+ActiveRecord::Schema.define(:version => 20120806163626) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -68,6 +68,21 @@ ActiveRecord::Schema.define(:version => 20120806085023) do
   create_table "users", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "works", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "logo1_file_name"
+    t.string   "logo1_content_type"
+    t.integer  "logo1_file_size"
+    t.datetime "logo1_updated_at"
+    t.string   "logo2_file_name"
+    t.string   "logo2_content_type"
+    t.integer  "logo2_file_size"
+    t.datetime "logo2_updated_at"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
 end

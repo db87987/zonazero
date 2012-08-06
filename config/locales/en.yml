@@ -6,7 +6,7 @@ en:
        other: "Клиенты"
    attributes:
      client:
-       title: "Имя"
+       title: "Клиент"
        point1: "Пункт 1"
        point2: "Пункт 2"
        point3: "Пункт 3"
