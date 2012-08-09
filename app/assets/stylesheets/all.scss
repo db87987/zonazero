@@ -838,12 +838,13 @@ h1, #container .content-idx .ci-news h2, #container #m-menu-wrap .mm-carousel ul
 
 .up-link {
 	background: url(up-link.png) no-repeat;
-	display: block;
-	position: relative;
-	top: -120px;
+	display: none;
+	position: fixed;
+	bottom: 50px;
 	overflow: hidden;
 	text-indent: -1000px;
 	height: 50px;
+	z-index: 10;
 	width: 50px;
 }
 
