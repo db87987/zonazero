@@ -77,12 +77,22 @@ $(document).ready(function(){
 	$(".awards-block li").click(function(){
 		var thisLiHeight = $(this).height();
 		
+		$(this).siblings("li").find(".award-detail").hide();
 		$(this).find(".award-detail").css("margin-top", "-" + thisLiHeight + "px").show();
 		
 		return false;
 	})
 	
 	$(".award-detail").click(function(){return false;})
+	
+	// Появление скролла "Наверх"
+	$(window).scroll(function(){
+		if($(this).scrollTop() > 0){
+			$(".up-link").fadeIn();
+		} else {
+			$(".up-link").fadeOut();
+		}		
+	}); 
 	
 	// Наверх (скролл)
 	$(".up-link").click(function(){
@@ -98,10 +108,4 @@ $(document).ready(function(){
         return false;
     });
 	
-	// Карусель на главной. Поведение некоторых элементов
-	$(".si-arrows").click(function(){
-        //parent.history.back();
-		
-        //return false;
-    });
  });

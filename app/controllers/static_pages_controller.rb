@@ -8,9 +8,6 @@ class StaticPagesController < ApplicationController
   def kit
   end
 
-  def order
-  end
-
   def contact
   end
 end

@@ -17,29 +17,29 @@
 
 // Карусель
 	$(function() {
-		// Слайдер
-		$("#slider-idx ul").carouFredSel({
-    		circular: true,
-    		infinite: false,
-    		auto    : false,
-    		scroll  : {
-        		items   : 1
-    		},
-    		prev    : {
-        		button  : "#si-prev"
-    		},
-    		next    : {
-        		button  : "#si-next"
-    		},
-    		pagination  : {
-        		container       : "#paging",
-        		anchorBuilder   : function( nr, item ) {
-            		var pagingTitle = $(".si-title", item).html();
-            		return '<span><a href="#">' + pagingTitle + '</a></span>';
-        		}
-        	}
-		});
-	});	
+			// Слайдер
+				$("#slider-idx ul").carouFredSel({
+		    		circular: true,
+		    		infinite: false,
+		    		auto    : false,
+		    		scroll  : {
+		        		items   : 1
+		    		},
+		    		prev    : {
+		        		button  : "#si-prev"
+		    		},
+		    		next    : {
+		        		button  : "#si-next"
+		    		},
+		    		pagination  : {
+		        		container       : "#paging",
+		        		anchorBuilder   : function( nr, item ) {
+		            		var pagingTitle = $(".si-title", item).html();
+		            		return '<span><a href="#">' + pagingTitle + '</a></span>';
+		        		}
+		        	}
+				});
+			});
 //
 
 // Делает пункт меню активным

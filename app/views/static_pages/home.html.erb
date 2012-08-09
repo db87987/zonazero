@@ -12,42 +12,45 @@
 						<li><%= link_to "пресс-кит", kit_path %></li>
 					</ul>
 				</li>
-				<li><%= link_to "Работы", about_path %></li>
-				<li><%= link_to "Награды", about_path %></li>
-				<li><%= link_to "Контакты", contact_path %></li>
+				<li><%= link_to "Работы", works_path %></li>
+				<li><%= link_to "Награды", awards_path %></li>
+				<li><%= link_to (contact_path) do %>
+					<span>Контакты</span>
+					<% end %></li>
 				<li><a href="#" class="order-link"><span>Заказать</span></a></li>
 			</ul>
 		</div>
+		
 		<div id="slider-idx">
 			<ul>
 				<li>
 					<img src="picture/slide-1.jpg" width="940" height="906" alt="slide-1">
 					<span class="si-title">Oyster: брендинг</span>
-					<a href="#" class="si-detail">Перейти<br />к проекту</a>
+					<a href="#" class="si-detail"><span>Перейти<br />к проекту</span></a>
 				</li>
 				
 				<li>
 					<img src="picture/slide-2.jpg" width="940" height="906" alt="slide-2">
 					<span class="si-title">Кит-финанс брокер:<br />рекламная<br />кампания-2012</span>
-					<a href="#" class="si-detail">Перейти<br />к проекту</a>
+					<a href="#" class="si-detail"><span>Перейти<br />к проекту</span></a>
 				</li>
 				
 				<li>
 					<img src="picture/slide-3.jpg" width="940" height="906" alt="slide-3">
 					<span class="si-title">Тест</span>
-					<a href="#" class="si-detail">Перейти<br />к проекту</a>
+					<a href="#" class="si-detail"><span>Перейти<br />к проекту</span></a>
 				</li>
 				
 				<li>
 					<img src="picture/slide-3.jpg" width="940" height="906" alt="slide-3">
 					<span class="si-title">Euromed<br />group:<br />ребрендинг</span>
-					<a href="#" class="si-detail">Перейти<br />к проекту</a>
+					<a href="#" class="si-detail"><span>Перейти<br />к проекту</span></a>
 				</li>
 				
 				<li>
 					<img src="picture/slide-3.jpg" width="940" height="906" alt="slide-3">
 					<span class="si-title">владимир<br />михайлов:<br />позициони–<br />рование<br />новой марки</span>
-					<a href="#" class="si-detail">Перейти<br />к проекту</a>
+					<a href="#" class="si-detail"><span>Перейти<br />к проекту</span></a>
 				</li>
 			</ul>
 			
@@ -59,7 +62,7 @@
 		<div class="footer-space"></div>
 	</div>
 	
-			<%= render 'layouts/footer' %>
+	<%= render 'layouts/footer' %>
 	
 	<div class="order-block" id="order-block">
 		<form name="order-form" id="order-form" method="POST" action="">

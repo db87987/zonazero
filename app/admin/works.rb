@@ -1,7 +1,7 @@
-ActiveAdmin.register Work do
+ActiveAdmin.register Work, { :sort_order => :id_asc } do
   
    index do 
-    column :id, :order => "id ASC"
+    column :id
     column :title
     
     default_actions

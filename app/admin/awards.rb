@@ -1,6 +1,6 @@
-ActiveAdmin.register Award do
+ActiveAdmin.register Award, { :sort_order => :id_asc } do
      index do 
-      column :id, :order => "id ASC"
+      column :id
       column :title
 
       default_actions

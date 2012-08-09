@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'EtelkaMediumProRegular';
-    src: url('../webfonts/etelkamediumpro-webfont.eot');
-    src: url('../webfonts/etelkamediumpro-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../webfonts/etelkamediumpro-webfont.woff') format('woff'),
-         url('../webfonts/etelkamediumpro-webfont.ttf') format('truetype');
+    src: asset-url('etelkamediumpro-webfont.eot', font);
+    src: asset-url('etelkamediumpro-webfont.eot?#iefix', font) format('embedded-opentype'),
+         asset-url('etelkamediumpro-webfont.woff', font) format('woff'),
+         asset-url('etelkamediumpro-webfont.ttf', font) format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -11,10 +11,10 @@
 
 @font-face {
     font-family: 'EtelkaMediumProBold';
-    src: url('../webfonts/etelkamediumprobold-webfont.eot');
-    src: url('../webfonts/etelkamediumprobold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../webfonts/etelkamediumprobold-webfont.woff') format('woff'),
-         url('../webfonts/etelkamediumprobold-webfont.ttf') format('truetype');
+    src: asset-url('etelkamediumprobold-webfont.eot', font);
+    src: asset-url('etelkamediumprobold-webfont.eot?#iefix', font) format('embedded-opentype'),
+         asset-url('etelkamediumprobold-webfont.woff', font) format('woff'),
+         asset-url('etelkamediumprobold-webfont.ttf', font) format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -22,10 +22,10 @@
 
 @font-face {
     font-family: 'EtelkaLightProRegular';
-    src: url('../webfonts/etelkalightpro-webfont.eot');
-    src: url('../webfonts/etelkalightpro-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../webfonts/etelkalightpro-webfont.woff') format('woff'),
-         url('../webfonts/etelkalightpro-webfont.ttf') format('truetype');
+    src: asset-url('etelkalightpro-webfont.eot', font);
+    src: asset-url('etelkalightpro-webfont.eot?#iefix', font) format('embedded-opentype'),
+         asset-url('etelkalightpro-webfont.woff', font) format('woff'),
+         asset-url('etelkalightpro-webfont.ttf', font) format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -586,19 +586,25 @@ h1, #container .content-idx .ci-news h2, #container #m-menu-wrap .mm-carousel ul
 }
 
 #container #slider-idx .si-detail {
-	background: url(ring-yellow.png) no-repeat;
+	background: url(ring-yellow.png) no-repeat center -2000px;
 	color: #000;
 	display: block;
 	font-size: 27px;
-	height: 130px;
+	height: 290px;
 	position: absolute;
 	line-height: 100%;
-	left: 50%; top: 310px;
-	margin-left: -100px;
-	padding-top: 70px;
+	left: 50%; top: 110px;
+	margin-left: -400px;
+	overflow: hidden;
+	padding-top: 260px;
 	text-align: center;
-	width: 200px;
+	width: 800px;
 }
+
+#container #slider-idx .si-detail span {display: none;}
+
+#container #slider-idx .si-detail:hover {background-position: center 190px;}
+#container #slider-idx .si-detail:hover span {display: inline}
 
 #container #slider-idx .si-links {
 	position: absolute;
