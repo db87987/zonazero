@@ -1,5 +1,5 @@
 class Award < ActiveRecord::Base
-  attr_accessible :description, :logo1, :title
+  attr_accessible :description, :logo1, :title, :year, :year1, :description1, :year2, :description2
   
     has_attached_file :logo1, :styles => { :small => "100x100>", 
                       :url  => "/assets/clients/:id/:style/:basename.:extension",
