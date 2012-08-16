@@ -7,7 +7,7 @@ class Client < ActiveRecord::Base
                     :path => ":rails_root/public/assets/clients/:id/:style/:basename.:extension"
                                  }
 
-  has_attached_file :logo2, :styles => { :big => "156x68>", 
+  has_attached_file :logo2, :styles => { :big => "260x80>", 
                     :url  => "/assets/clients/:id/:style/:basename.:extension",
                     :path => ":rails_root/public/assets/clients/:id/:style/:basename.:extension"
                                  }
