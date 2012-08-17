@@ -10,7 +10,7 @@ ActiveAdmin.register Work, { :sort_order => :id_asc } do
   form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs "Details" do
     f.input :title
-    f.input :description
+    f.input :description, :input_html => {:class => "ckeditor"}
     f.input :logo1, :as => :file
     f.input :logo2, :as => :file
   end
