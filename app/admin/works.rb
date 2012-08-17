@@ -20,7 +20,9 @@ ActiveAdmin.register Work, { :sort_order => :id_asc } do
   show do
         attributes_table do
           row :title
-          row :description
+          row :description do
+            sanitize(work.description)
+          end
           row :logo1 do
             image_tag(work.logo1.url)
           end
