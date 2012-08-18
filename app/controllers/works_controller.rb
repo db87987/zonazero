@@ -9,7 +9,7 @@ class WorksController < ApplicationController
       format.json { render json: @works }
     end
   end
-
+    
   # GET /works/1
   # GET /works/1.json
   def show
@@ -18,6 +18,15 @@ class WorksController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @work }
+    end
+  end
+  
+  def home
+    @works = Work.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @works }
     end
   end
 end

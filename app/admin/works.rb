@@ -3,6 +3,7 @@ ActiveAdmin.register Work, { :sort_order => :id_asc } do
    index do 
     column :id
     column :title
+    column :front_show
     
     default_actions
   end
@@ -12,6 +13,8 @@ ActiveAdmin.register Work, { :sort_order => :id_asc } do
     f.input :title
     f.input :description, :input_html => {:class => "ckeditor"}
     f.input :logo1, :as => :file
+    f.input :front_show, :as => :radio, :label => "Place in slider?"
+    f.input :front_title
     f.input :logo2, :as => :file
   end
   f.buttons

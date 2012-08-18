@@ -1,24 +1,40 @@
-<body>
+<body class="index-tpl">
 	<div id="container">
-		<%= render 'layouts/header' %>	
-		<div id="middle">
-			<div class="h1 wl-h1">
-				<h1>Избранные работы</h1>
-			</div>
-					
-			<ul class="works-list">
+		<div id="header1">
+			<%= link_to "На главную", root_path, class: "logo" %>
+
+			<ul>
+				<li>
+					<%= link_to "компания", about_path %>
+					<ul>
+						<li><%= link_to "про зеро", about_path %></li>
+						<li><%= link_to "клиенты", clients_path %></li>
+						<li><%= link_to "пресс-кит", kit_path %></li>
+					</ul>
+				</li>
+				<li><%= link_to "Работы", works_path %></li>
+				<li><%= link_to "Награды", awards_path %></li>
+				<li><%= link_to (contact_path) do %>
+					<span>Контакты</span>
+					<% end %></li>
+				<li><a href="#" class="order-link"><span>Заказать</span></a></li>
+			</ul>
+		</div>
+		
+		<div id="slider-idx">
+			<ul>
 				<% @works.each do |work| %>
 				<li>
-					<%= link_to (work) do %>
-					<span class="wl-img">
-						<%= image_tag(work.logo1) %>
-					</span>
-						<%= work.title %>
-						<span class="wl-brd"></span>
-					<% end %>
+					<%= image_tag(work.logo2) %>
+					<span class="si-title"><%= work.front_title %></span>
+					<a href="#" class="si-detail"><span>Перейти<br />к проекту</span></a>
 				</li>
 				<% end %>
 			</ul>
+			
+			<div id="paging"  class="si-links"></div>
+			<a href="#" id="si-prev" class="si-arrows" title="Назад">Назад</a>
+			<a href="#" id="si-next" class="si-arrows" title="Вперед">Вперед</a>
 		</div>
 		
 		<div class="footer-space"></div>
@@ -135,8 +151,3 @@
 	</div>
 </body>
 </html>
-
-
-
-
-
