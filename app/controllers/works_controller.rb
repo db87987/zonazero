@@ -22,7 +22,7 @@ class WorksController < ApplicationController
   end
   
   def home
-    @works = Work.all
+    @front_works = Work.where("front_show = 't'")
 
     respond_to do |format|
       format.html # index.html.erb
@@ -30,3 +30,4 @@ class WorksController < ApplicationController
     end
   end
 end
+
