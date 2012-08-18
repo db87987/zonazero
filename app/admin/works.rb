@@ -13,7 +13,7 @@ ActiveAdmin.register Work, { :sort_order => :id_asc } do
     f.input :title
     f.input :description, :input_html => {:class => "ckeditor"}
     f.input :logo1, :as => :file, :label => "Works list picture"
-    f.input :front_show, :label => "Publish Post At"
+    f.input :front_show, :as => :radio, :label => "Place in slider?"
     f.input :front_title, :label => "Slider title"
     f.input :logo2, :as => :file, :label => "Slider picture"
   end
