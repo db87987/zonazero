@@ -12,10 +12,10 @@ ActiveAdmin.register Work, { :sort_order => :id_asc } do
     f.inputs "Details" do
     f.input :title
     f.input :description, :input_html => {:class => "ckeditor"}
-    f.input :logo1, :as => :file, :label => "Works list picture"
+    f.input :logo1, :as => :file, :label => "138x138px Works list picture"
     f.input :front_show, :as => :radio, :label => "Place in slider?"
     f.input :front_title, :label => "Slider title"
-    f.input :logo2, :as => :file, :label => "Slider picture"
+    f.input :logo2, :as => :file, :label => "940x906px Slider picture"
   end
   f.buttons
  end

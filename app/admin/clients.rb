@@ -20,8 +20,8 @@ ActiveAdmin.register Client, { :sort_order => :id_asc } do
     f.input :point3
     f.input :point4
     f.input :point5
-    f.input :logo1, :as => :file
-    f.input :logo2, :as => :file
+    f.input :logo1, :as => :file, :label => "100x100px"
+    f.input :logo2, :as => :file, :label => "260x80px"
   end
   f.buttons
  end

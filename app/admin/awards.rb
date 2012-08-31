@@ -15,7 +15,7 @@ ActiveAdmin.register Award, { :sort_order => :id_asc } do
       f.input :description1
       f.input :year2
       f.input :description2
-      f.input :logo1, :as => :file
+      f.input :logo1, :as => :file, :label => "100x100px"
     end
     f.buttons
    end
