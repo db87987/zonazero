@@ -6,7 +6,8 @@ gem 'paperclip'
 gem 'capistrano'
 gem 'unicorn'
 gem 'execjs'
-gem 'therubyracer'
+gem 'therubyracer', '~> 0.10.2' 
+
 
 gem "ckeditor", "3.7.1"
 
