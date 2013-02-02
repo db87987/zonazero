@@ -2,6 +2,7 @@ class WorksController < ApplicationController
   # GET /works
   # GET /works.json
   def index
+    @message = Message.new
     @works = Work.all
 
     respond_to do |format|
@@ -13,6 +14,7 @@ class WorksController < ApplicationController
   # GET /works/1
   # GET /works/1.json
   def show
+    @message = Message.new
     @work = Work.find(params[:id])
 
     respond_to do |format|
@@ -22,6 +24,8 @@ class WorksController < ApplicationController
   end
   
   def home
+    @message = Message.new
+    
     @front_works = Work.where(:front_show => true)
 
     respond_to do |format|

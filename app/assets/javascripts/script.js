@@ -64,7 +64,7 @@ $(document).ready(function(){
 	
 	// Отправить форму по ссылке
 	$(".ob-submit").click(function(){
-		$("#order-form").submit();
+		$(".new_message").submit();
 	})
 	
 	$(".ad-close").click(function(){

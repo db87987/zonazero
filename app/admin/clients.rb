@@ -1,8 +1,8 @@
 ActiveAdmin.register Client, { :sort_order => :id_asc } do
-
+  config.batch_actions = false
+  config.clear_sidebar_sections!
 
    index do 
-    column :id
     column :title
     column :point1
     column :point2
@@ -20,8 +20,8 @@ ActiveAdmin.register Client, { :sort_order => :id_asc } do
     f.input :point3
     f.input :point4
     f.input :point5
-    f.input :logo1, :as => :file, :label => "100x100px"
-    f.input :logo2, :as => :file, :label => "260x80px"
+    f.input :logo1, :as => :file, :hint => "100x100px"
+    f.input :logo2, :as => :file, :hint => "260x80px"
   end
   f.buttons
  end
@@ -44,7 +44,6 @@ ActiveAdmin.register Client, { :sort_order => :id_asc } do
           image_tag(client.logo2.url)
         end
       end
-      active_admin_comments
     end
 
 end

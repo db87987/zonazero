@@ -1,6 +1,9 @@
 ActiveAdmin.register Award, { :sort_order => :id_asc } do
+  config.batch_actions = false
+  config.clear_sidebar_sections!
+  
+  
      index do 
-      column :id
       column :title
 
       default_actions
@@ -9,13 +12,14 @@ ActiveAdmin.register Award, { :sort_order => :id_asc } do
     form :html => { :enctype => "multipart/form-data" } do |f|
       f.inputs "Details" do
       f.input :title
-      f.input :year
-      f.input :description
-      f.input :year1
-      f.input :description1
-      f.input :year2
-      f.input :description2
-      f.input :logo1, :as => :file, :label => "100x100px"
+      f.input :year, :as => :select, :collection => ((yr=Date.current.year)-9..yr).to_a.reverse
+      f.input :description, :input_html => { :rows => 3 }
+      f.input :year1, :as => :select, :collection => ((yr=Date.current.year)-9..yr).to_a.reverse
+      f.input :description1, :input_html => { :rows => 3 }
+      f.input :year2, :as => :select, :collection => ((yr=Date.current.year)-9..yr).to_a.reverse
+      f.input :description2, :input_html => { :rows => 3 }
+      f.input :logo1, :as => :file, :hint => "100x100px"
+      
     end
     f.buttons
    end

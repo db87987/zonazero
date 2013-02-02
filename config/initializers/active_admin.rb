@@ -7,6 +7,8 @@ ActiveAdmin.setup do |config|
   #
   config.site_title = "Zonazero"
 
+  config.root_to = 'awards#index'
+  
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
@@ -110,7 +112,7 @@ ActiveAdmin.setup do |config|
   # Active Admin resources from here.
   #
   # config.before_filter :do_something_awesome
-
+  
 
   # == Register Stylesheets & Javascripts
   #

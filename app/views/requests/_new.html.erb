@@ -1,0 +1,109 @@
+<div class="order-block" id="order-block">
+	<%= form_for @message, :url => request_path, :remote=>true do |f| %>
+	
+		<ul>
+			<li>
+				<label>Имя:</label>
+				<%= f.text_field :name %>
+			</li>
+			
+			<li>
+				<label>Компания:</label>
+				<%= f.text_field :company %>
+			</li>
+			
+			<li>
+				<label>Должность:</label>
+				<%= f.text_field :position %>
+			</li>
+			
+			<li>
+				<label>Телефон:</label>
+				<div class="ob-answer ob-phone">
+					<p>( <%= f.text_field :pre, :class=>'p-code' %> ) <%= f.text_field :tel, :class=>'p-number' %><a href="#" title="Удалить" class="p-remove">Удалить</a><a href="#" title="Добавить" class="p-add">Добавить</a></p>
+				</div>
+			</li>
+			
+			<li>
+				<label>Эл. почта:</label>
+				<%= f.text_field :mail %>
+			</li>
+			
+			<li>
+				<label>Чем интересуетесь:</label>
+				<div class="ob-answer ob-interest">
+					<p><a href="#">Маркетинговые коммуникации</a></p>
+					<div class="oba-sub">
+						<p><input type="checkbox" id="555" /><label for="555">Разработка промо-сайта</label></p>
+						<p><input type="checkbox" id="666" /><label for="666">Разработка корпоративного сайта</label></p>
+						<p><input type="checkbox" id="777" /><label for="777">Разработка интернет-магазина</label></p>
+					</div>
+					
+					<p><a href="#">Дизайн</a></p>
+					<div class="oba-sub">
+						<p><input type="checkbox" id="5555" /><label for="5555">Разработка промо-сайта</label></p>
+						<p><input type="checkbox" id="6666" /><label for="6666">Разработка корпоративного сайта</label></p>
+						<p><input type="checkbox" id="7777" /><label for="7777">Разработка интернет-магазина</label></p>
+					</div>
+					
+					<p><a href="#">Эвент-маркетинг</a></p>
+					<div class="oba-sub">
+						<p><input type="checkbox" id="55555" /><label for="55555">Разработка промо-сайта</label></p>
+						<p><input type="checkbox" id="66666" /><label for="66666">Разработка корпоративного сайта</label></p>
+						<p><input type="checkbox" id="77777" /><label for="77777">Разработка интернет-магазина</label></p>
+					</div>
+					
+					<p><a href="#">Веб-проекты</a></p>
+					<div class="oba-sub">
+						<p><input type="checkbox" id="555555" /><label for="555555">Разработка промо-сайта</label></p>
+						<p><input type="checkbox" id="666666" /><label for="666666">Разработка корпоративного сайта</label></p>
+						<p><input type="checkbox" id="777777" /><label for="777777">Разработка интернет-магазина</label></p>
+					</div>
+					
+					<p><a href="#">Комплексные решения</a></p>
+					<div class="oba-sub">
+						<p><input type="checkbox" id="5555555" /><label for="5555555">Разработка промо-сайта</label></p>
+						<p><input type="checkbox" id="6666666" /><label for="6666666">Разработка корпоративного сайта</label></p>
+						<p><input type="checkbox" id="7777777" /><label for="7777777">Разработка интернет-магазина</label></p>
+					</div>
+				</div>
+			</li>
+			
+			<li>
+				<label>Примечания:</label>
+				<textarea></textarea>
+			</li>
+			
+			<li>
+				<label>Хотели бы получить ответ, содержащий:</label>
+				<div class="ob-answer">
+					<p><input type="checkbox" id="1" /><label for="1">Прайс-лист на указанные услуги</label></p>
+					<p><input type="checkbox" id="2" /><label for="2">Презентации проектов</label></p>
+					<p><input type="checkbox" id="3" /><label for="3">Референс-лист</label></p>
+					<p><input type="checkbox" id="4" /><label for="4">Краткую справку об агентстве</label></p>
+				</div>
+			</li>
+			
+			<li>
+				<label>Откуда вы узнали о ZERO?:</label>
+				<div class="ob-answer oba-zero">
+					<p><input type="checkbox" id="5" /><label for="5">Рекомендация</label></p>
+					<p><input type="checkbox" id="6" /><label for="6">Публикация в СМИ</label></p>
+					<p><input type="checkbox" id="7" /><label for="7">Справочник</label></p>
+					<p><input type="checkbox" id="8" /><label for="8">Поиск в интернете</label></p>
+					<p><input type="checkbox" id="9" /><label for="9">Отраслевое мероприятие</label></p>
+				</div>
+			</li>
+			<li>
+				<label>&nbsp;</label>
+				<div class="ob-answer">
+					<a href="#" class="ob-submit" tabindex="1" rel="nofollow">Отправить запрос</a>
+				</div>
+			</li>
+		</ul>
+	</form>
+	<% end %>
+	
+	<a href="index.html" class="logo" title="На главную">ZERO b2b communications agency</a>
+	<a href="#" class="ob-close"><span>Заказать</span></a>
+</div>
