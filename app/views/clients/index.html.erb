@@ -4,9 +4,10 @@
 		<div id="middle">
 			<div id="left">
 				<ul class="l-menu">	
-					<li><%= link_to "про зеро", about_path %></li>
+					<% Page.all.each do |page| %>
+					<%= content_tag :li, (link_to page.title, page), :class => ('active' if @page == page) %>
+					<% end %>
 					<li class="active"><%= link_to "клиенты", clients_path %></li>
-					<li><%= link_to "пресс-кит", kit_path %></li>
 				</ul>
 			</div>
 
