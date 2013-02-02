@@ -1,4 +1,6 @@
 ActiveAdmin.register Work, { :sort_order => :id_asc } do
+  config.batch_actions = false
+  config.clear_sidebar_sections!
   
    index do 
     column :title
@@ -10,7 +12,7 @@ ActiveAdmin.register Work, { :sort_order => :id_asc } do
   form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs "Details" do
     f.input :title
-    f.input :description, :input_html => {:class => "ckeditor"}
+    f.input :description, :as => :ckeditor, :label => false
     f.input :logo1, :as => :file, :hint => "138x138px"
     f.input :front_show, :as => :radio
     f.input :front_title

@@ -1,5 +1,7 @@
 Zonazero::Application.routes.draw do
   
+  resources :pages
+
   match 'request' => 'requests#new', :as => 'request', :via => :get
   match 'request' => 'requests#create', :as => 'request', :via => :post
 
