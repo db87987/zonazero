@@ -40,6 +40,7 @@ ru:
       client:
         title: "Клиент"
         description: "Текст"
+        point1: "Что сделано?"
         point2: "Что сделано?"
         point3: "Что сделано?"
         point4: "Что сделано?"
