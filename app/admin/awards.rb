@@ -11,13 +11,18 @@ ActiveAdmin.register Award, { :sort_order => :id_asc } do
 
     form :html => { :enctype => "multipart/form-data" } do |f|
       f.inputs "Details" do
+      
+      years = ((yr=Date.current.year)-12..yr).to_a.reverse
+      
       f.input :title
-      f.input :year, :as => :select, :collection => ((yr=Date.current.year)-9..yr).to_a.reverse
+      f.input :year, :as => :select, :collection => years, :include_blank => false
       f.input :description, :input_html => { :rows => 3 }
-      f.input :year1, :as => :select, :collection => ((yr=Date.current.year)-9..yr).to_a.reverse
+      f.input :year1, :as => :select, :collection => years, :include_blank => false
       f.input :description1, :input_html => { :rows => 3 }
-      f.input :year2, :as => :select, :collection => ((yr=Date.current.year)-9..yr).to_a.reverse
+      f.input :year2, :as => :select, :collection => years, :include_blank => false
       f.input :description2, :input_html => { :rows => 3 }
+      f.input :year3, :as => :select, :collection => years, :include_blank => false
+      f.input :description3, :input_html => { :rows => 3 }
       f.input :logo1, :as => :file, :hint => "100x100px"
       
     end

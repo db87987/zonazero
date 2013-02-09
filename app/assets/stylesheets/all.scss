@@ -36,7 +36,7 @@ html,body,div,span,object,h1,h2,h3,h4,h5,h6,p,a,abbr,em,b,strong,dl,dt,dd,ol,ul,
 
 #header1 ul ul *, h1, .contacts-tpl #container #header1 .address *, #middle #right .clients-list li div .cl-title, .order-block *, #middle .awards-block li .award-item p, #middle .awards-block li .award-item .ab-show-link span, #middle .awards-block li .award-detail *, #middle #left .l-work-menu li a {font-family: EtelkaMediumProRegular, Tahoma, Arial, Verdana, sans-serif;}
 #header1 ul *, .contacts-tpl #container #header1 .address .contacts-link, #container #slider-idx .si-title, #container #slider-idx .si-links span a, .ob-close spanб #middle .awards-block li .award-detail dt {font-family: EtelkaMediumProBold, Tahoma, Arial, Verdana, sans-serif;}
-.h1 .h1-notice, .work-block .content *, #container #slider-idx .si-detail {font-family: EtelkaLightProRegular, Tahoma, Arial, Verdana, sans-serif;}
+.h1 .h1-notice, .work-block, .content *, #container #slider-idx .si-detail {font-family: EtelkaLightProRegular, Tahoma, Arial, Verdana, sans-serif;}
 
 table {border-collapse:collapse;}
 a {color: #5c707c; text-decoration: none;}
@@ -48,7 +48,6 @@ ul, ol {list-style:none}
 
 html {min-width: 950px;}
 body {background: url(header-bg.gif) repeat-x left top; color: #5c6f7c; min-width: 950px; width: 100%}
-
 html, body {min-height: 100%!important; height: 100%;}
 
 h1, h2, h3, h4, h5, h6 {
@@ -56,11 +55,10 @@ h1, h2, h3, h4, h5, h6 {
 	padding-bottom: 10px;
 	font-weight: normal;
 	line-height: 100%;
-	text-transform: uppercase;
 }
 
 h1 {
-	font-size: 30px; 
+	font-size: 24px; 
 	height: 65px;
 	overflow: hidden;
 	padding-top: 35px;
@@ -833,13 +831,13 @@ h1, #container .content-idx .ci-news h2, #container #m-menu-wrap .mm-carousel ul
 
 #middle .awards-block .ab-active .ab-img img {cursor: default;}
 
-.work-block .content {font-size: 18px!important;}
+.work-block .content {font-size: 14px!important;}
 
 .up-link {
 	background: url(up-link.png) no-repeat;
 	display: none;
 	position: fixed;
-	bottom: 50px;
+	bottom: 300px;
 	overflow: hidden;
 	text-indent: -1000px;
 	height: 50px;

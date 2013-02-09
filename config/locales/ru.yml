@@ -36,6 +36,8 @@ ru:
         description1: "Описание"
         year2: "Год"
         description2: "Описание"
+        year3: "Год"
+        description3: "Описание"
         logo1: "Изображение"
       client:
         title: "Клиент"
