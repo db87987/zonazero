@@ -96,7 +96,7 @@ $(document).ready(function(){
 	
 	// Наверх (скролл)
 	$(".up-link").click(function(){
-		$("html, body").animate({scrollTop:300}, "slow");
+		$("html, body").animate({scrollTop:0}, "slow");
 		
 		return false;
 	})
