@@ -3,15 +3,9 @@ class Work < ActiveRecord::Base
   
   
   
-    has_attached_file :logo1, :styles => { :small => "138x138>", 
-                      :url  => "/assets/works/:id/:style/:basename.:extension",
-                      :path => ":rails_root/public/assets/works/:id/:style/:basename.:extension"
-                                   }
+    has_attached_file :logo1, :styles => { :small => "138x138>" }
 
-    has_attached_file :logo2, :styles => { :big => "940x906>", 
-                      :url  => "/assets/works/:id/:style/:basename.:extension",
-                      :path => ":rails_root/public/assets/works/:id/:style/:basename.:extension"
-                                   }
+    has_attached_file :logo2, :styles => { :big => "940x906>" }
 
 
   validates_attachment_size :logo1, :less_than => 5.megabytes
