@@ -23,7 +23,17 @@ ActiveAdmin.register Award, { :sort_order => :id_asc } do
       f.input :description2, :input_html => { :rows => 3 }
       f.input :year3, :as => :select, :collection => years
       f.input :description3, :input_html => { :rows => 3 }
-      f.input :logo1, :as => :file, :hint => "100x100px"
+      f.input :logo1, :as => :file, :hint => ( f.object.new_record? || f.object.logo1.nil? ) ? "100x100px" : image_tag(f.object.logo1.url(:small))+"100x100px"
+
+        
+        
+        
+        
+      
+      
+      
+      
+      
       
     end
     f.buttons
@@ -39,7 +49,7 @@ ActiveAdmin.register Award, { :sort_order => :id_asc } do
             row :year2
             row :description2
             row :logo1 do
-              image_tag(award.logo1.url)
+              image_tag(award.logo1.url(:small))
             end
           end
         end

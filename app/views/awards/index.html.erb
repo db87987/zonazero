@@ -14,7 +14,9 @@
 					<% @awards.each do |award| %>
 					<li>
 						<div class="award-item">
-							<span class="ab-img"><img src="<%= award.logo1 %>" width="100" height="100" alt="ipraproba"></span>
+							<span class="ab-img">
+								<%= image_tag(award.logo1.url(:small)) %>		
+							</span>
 							<p><%= award.title %></p>
 							<span class="ab-show-link"><span>Показать награды</span></span>
 						</div>
