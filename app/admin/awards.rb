@@ -4,6 +4,12 @@ ActiveAdmin.register Award, { :sort_order => :id_asc } do
   
   
      index do 
+      column :logo1 do |column|
+        unless column.logo1.blank?
+          image_tag(column.logo1.url(:small))
+        end
+      end
+        
       column :title
 
       default_actions
