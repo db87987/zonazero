@@ -2,7 +2,6 @@ class WorksController < ApplicationController
   # GET /works
   # GET /works.json
   def index
-    @message = Message.new
     @works = Work.all
 
     respond_to do |format|

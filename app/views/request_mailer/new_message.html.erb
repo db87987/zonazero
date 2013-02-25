@@ -1,0 +1,27 @@
+<h3>Добрый день!</h3>
+
+<p>Получена заявка с сайта zonazero.ru</p>
+
+<p>Имя: <%= @message.name %><br/>
+Компания: <%= @message.company %><br/>
+Должность: <%= @message.position %><br/>
+Телефон (<%= @message.pre %>)<%= @message.tel %><br/>
+Эл. почта: <%= @message.mail %><br/>
+Интересует: <%= @message.comment %></p>
+
+<b>Интересует:</b>
+  <% Category.all.each do |category| %>
+	<p><strong><%= category.title unless @message.options.where(:category_id => category.id).empty? %></strong>
+		<ul>
+			<% @message.options.where(:category_id => category.id).each do |option| %>
+    			<li><%= option.title %></li>
+  			<% end %>
+		</ul>
+	</p>
+	<% end %>
+
+
+
+Хорошего дня!
+
+Zonazero.ru

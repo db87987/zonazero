@@ -10,6 +10,6 @@
 <body>
 
 <%= yield %>
-<%= render 'requests/new' %>
+<%= render :partial => 'messages/form', :locals => { :@message => Message.new} %>
 </body>
 </html>

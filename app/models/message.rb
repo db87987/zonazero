@@ -1,22 +1,8 @@
-class Message
-
-  include ActiveModel::Validations
-  include ActiveModel::Conversion
-  extend ActiveModel::Naming
-
-  attr_accessor :name, :company, :position, :pre, :tel, :mail
-
-  validates :name, :presence => true
+class Message < ActiveRecord::Base
+  attr_accessible :name, :company, :position, :pre, :tel, :mail, :comment, :option_ids
   
-  def initialize(attributes = {})
-    attributes.each do |name, value|
-      send("#{name}=", value)
-    end
-  end
-
-  def persisted?
-    false
-  end
-
+  has_many :messageoptions
+  has_many :options, through: :messageoptions
+  
+  
 end
-
