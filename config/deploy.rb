@@ -12,6 +12,19 @@
 # закомментируйте эту строку.
 require 'bundler/capistrano'
 
+namespace :deploy do
+  namespace :assets do
+    task :precompile, :roles => :web, :except => { :no_release => true } do
+      from = source.next_revision(current_revision)
+      if capture("cd #{latest_release} && #{source.local.log(from)} vendor/assets/ app/assets/ | wc -l").to_i > 0
+        run %Q{cd #{latest_release} && #{rake} RAILS_ENV=#{rails_env} #{asset_env} assets:precompile}
+      else
+        logger.info "Skipping asset pre-compilation because there were no asset changes"
+      end
+    end
+  end
+end
+
 ## Чтобы не хранить database.yml в системе контроля версий, поместите
 ## dayabase.yml в shared-каталог проекта на сервере и раскомментируйте
 ## следующие строки.
@@ -30,6 +43,7 @@ require 'bundler/capistrano'
 # Если вы не используете assets pipelining в своем проекте,
 # или у вас старая версия rails, закомментируйте эту строку.
 load 'deploy/assets'
+load 'config/deploy'
 
 # Для удобства работы мы рекомендуем вам настроить авторизацию
 # SSH по ключу. При работе capistrano будет использоваться

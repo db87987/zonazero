@@ -36,7 +36,7 @@ html,body,div,span,object,h1,h2,h3,h4,h5,h6,p,a,abbr,em,b,strong,dl,dt,dd,ol,ul,
 
 #header1 ul ul *, h1, .contacts-tpl #container #header1 .address *, #middle #right .clients-list li div .cl-title, .order-block *, #middle .awards-block li .award-item p, #middle .awards-block li .award-item .ab-show-link span, #middle .awards-block li .award-detail *, #middle #left .l-work-menu li a {font-family: EtelkaMediumProRegular, Tahoma, Arial, Verdana, sans-serif;}
 #header1 ul *, .contacts-tpl #container #header1 .address .contacts-link, #container #slider-idx .si-title, #container #slider-idx .si-links span a, .ob-close spanб #middle .awards-block li .award-detail dt {font-family: EtelkaMediumProBold, Tahoma, Arial, Verdana, sans-serif;}
-.h1 .h1-notice, .work-block, .content *, #container #slider-idx .si-detail {font-family: EtelkaLightProRegular, Tahoma, Arial, Verdana, sans-serif;}
+.h1 .h1-notice, .work-block, #container #slider-idx .si-detail {font-family: EtelkaLightProRegular, Tahoma, Arial, Verdana, sans-serif;}
 
 table {border-collapse:collapse;}
 a {color: #5c707c; text-decoration: none;}
@@ -407,7 +407,7 @@ h1, #container .content-idx .ci-news h2, #container #m-menu-wrap .mm-carousel ul
 	color: #000;
 }
 
-#middle #right .content {font-size: 14px;}
+#middle #right {font-size: 14px;}
 #middle #right .content a {color: #00a650; text-decoration: underline;}
 #middle #right .content a:hover {color: #d2421f;}
 
@@ -831,7 +831,7 @@ h1, #container .content-idx .ci-news h2, #container #m-menu-wrap .mm-carousel ul
 
 #middle .awards-block .ab-active .ab-img img {cursor: default;}
 
-.work-block .content {font-size: 14px!important;}
+.work-block .content {font-size: 16px;}
 
 .up-link {
 	background: url(up-link.png) no-repeat;
