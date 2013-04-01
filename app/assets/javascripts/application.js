@@ -13,38 +13,44 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-
-
 //= require ckeditor/init
+//= require_self
 
+function resizeContainer(){
+	var needHeight = $("#order-block").height() + 175;
+	if(needHeight > $("#container").height()){
+		$("#container").height(needHeight);
+	}
+}
 
-
-// Карусель
-	$(function() {
-			// Слайдер
-				$("#slider-idx ul").carouFredSel({
-		    		circular: true,
-		    		infinite: false,
-		    		auto    : false,
-		    		scroll  : {
-		        		items   : 1
-		    		},
-		    		prev    : {
-		        		button  : "#si-prev"
-		    		},
-		    		next    : {
-		        		button  : "#si-next"
-		    		},
-		    		pagination  : {
-		        		container       : "#paging",
-		        		anchorBuilder   : function( nr, item ) {
-		            		var pagingTitle = $(".si-title", item).html();
-		            		return '<span><a href="#">' + pagingTitle + '</a></span>';
-		        		}
-		        	}
-				});
-			});
-//
+function sliderInit(){
+	// Перед инициализацией надо задать ширину элементов карусели
+	// равной ширине окна
+	$("#slider-idx ul li").width($("body").width());
+		
+	// Слайдер
+	$("#slider-idx ul").carouFredSel({
+		circular: true,
+		infinite: false,
+		auto    : false,
+		scroll  : {
+			items   : 1
+		},
+		prev    : {
+			button  : "#si-prev"
+		},
+		next    : {
+			button  : "#si-next"
+		},
+		pagination  : {
+			container       : "#paging",
+			anchorBuilder   : function( nr, item ) {
+				var pagingTitle = $(".si-title", item).html();
+				return '<span><a href="#">' + pagingTitle + '</a></span>';
+			}
+		}
+	});
+}
 
 // Делает пункт меню активным
 $(function(){

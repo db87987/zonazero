@@ -1,6 +1,7 @@
 <body class="index-tpl">
 	<div id="container">
-		<div id="header1">
+		<div id="header">
+			<div class="header-ins">
 			<%= link_to "На главную", root_path, class: "logo" %>
 
 			<ul>
@@ -20,14 +21,15 @@
 					<% end %></li>
 				<li><a href="#" class="order-link"><span>Заказать</span></a></li>
 			</ul>
+			</div>
 		</div>
 		
 		<div id="slider-idx">
 			<ul>
 				<% @front_works.each do |work| %>
 				<li>
-					<%= image_tag(work.logo2) %>
-					<span class="si-title"><%= work.front_title %></span>
+					<img src="img/px.gif" alt="slide-1" style="background: url(img/picture/slide-big.jpg) no-repeat center top;">
+					<div class="sit-wrap"><span class="si-title"><%= work.front_title %></span></div>
 					<a href="<%= url_for work %>" class="si-detail"><span>Перейти<br />к проекту</span></a>
 				</li>
 				<% end %>
