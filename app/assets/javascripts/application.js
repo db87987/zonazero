@@ -16,6 +16,14 @@
 //= require ckeditor/init
 //= require_self
 
+ $(document).ready(function(){
+   sliderInit();
+   
+   $(window).resize(function() {
+    sliderInit();
+   });
+  });
+
 function resizeContainer(){
 	var needHeight = $("#order-block").height() + 175;
 	if(needHeight > $("#container").height()){

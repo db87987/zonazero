@@ -28,7 +28,7 @@
 			<ul>
 				<% @front_works.each do |work| %>
 				<li>
-					<img src="img/px.gif" alt="slide-1" style="background: url(<%= work.logo2 %>) no-repeat center top;">
+					<img src="img/px.gif" style="background: url(<%= work.logo2 %>) no-repeat center top;">
 					<div class="sit-wrap"><span class="si-title"><%= work.front_title %></span></div>
 					<a href="<%= url_for work %>" class="si-detail"><span>Перейти<br />к проекту</span></a>
 				</li>
