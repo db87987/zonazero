@@ -16,7 +16,7 @@ ActiveAdmin.register Page do
   form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs "Details" do
     f.input :title
-    f.input :description, :as => :ckeditor, :label => false
+    f.input :description, :as => :ckeditor, :input_html => { :ckeditor => { :height => 400 } }, :label => false
   end
   f.buttons
  end

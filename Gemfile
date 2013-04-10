@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 gem 'rails-i18n'
-gem 'activeadmin'
 gem 'paperclip'
 gem 'capistrano'
 gem 'unicorn'
@@ -10,7 +9,8 @@ gem 'execjs'
 gem 'therubyracer', '~> 0.10.2' 
 
 
-gem "ckeditor", "3.7.1"
+gem "activeadmin", "~> 0.6.0"
+gem "ckeditor", "~> 4.0.4"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
