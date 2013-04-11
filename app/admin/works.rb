@@ -13,10 +13,16 @@ ActiveAdmin.register Work, { :sort_order => :id_asc } do
     f.inputs "Details" do
     f.input :title
     f.input :description, :as => :ckeditor, :label => false
-    f.input :logo1, :as => :file, :hint => "138x138px"
+    f.input :logo1, :as => :file, :hint => ( f.object.new_record? || !f.object.logo1? ) ? nil : image_tag(f.object.logo1.url(:small))
+    unless f.object.new_record? || !f.object.logo1?
+   f.input :delete_logo1, :as => :boolean, :label => "destroy?"
+    end
     f.input :front_show, :as => :radio
     f.input :front_title
-    f.input :logo2, :as => :file, :hint => "940x906px"
+    f.input :logo2, :as => :file, :hint => ( f.object.new_record? || !f.object.logo2? ) ? nil : image_tag(f.object.logo2.url(:small))
+     unless f.object.new_record? || !f.object.logo2?
+    f.input :delete_logo2, :as => :boolean, :label => "destroy?"
+     end
   end
   f.buttons
  end
@@ -27,11 +33,15 @@ ActiveAdmin.register Work, { :sort_order => :id_asc } do
           row :description do
             sanitize(work.description)
           end
-          row :logo1 do
-            image_tag(work.logo1.url)
+          row :logo1 do |row|
+            if row.logo1?
+            image_tag(work.logo1.url(:small))
           end
-          row :logo2 do
-            image_tag(work.logo2.url)
+          end
+          row :logo2 do |row|
+            if row.logo2?
+            image_tag(work.logo2.url(:small))
+          end
           end
         end
       end
