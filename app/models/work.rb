@@ -1,5 +1,5 @@
 class Work < ActiveRecord::Base
-  attr_accessible :description, :logo1, :logo2, :title, :front_show, :front_title, :delete_logo1, :delete_logo2
+  attr_accessible :description, :logo1, :logo2, :title, :front_show, :front_title, :delete_logo1, :delete_logo2, :sn
   
   
   

@@ -1,17 +1,13 @@
 class WorksController < ApplicationController
-  # GET /works
-  # GET /works.json
   def index
-    @works = Work.all
+    @works = Work.order("sn ASC")
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @works }
     end
   end
-    
-  # GET /works/1
-  # GET /works/1.json
+
   def show
     @message = Message.new
     @work = Work.find(params[:id])

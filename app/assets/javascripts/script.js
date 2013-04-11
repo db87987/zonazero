@@ -7,6 +7,44 @@ function resizeContainer(){
 	}
 }
 
+function sliderInit(){
+	// Перед инициализацией надо задать ширину элементов карусели
+	// равной ширине окна
+	$("#slider-idx ul li").width($("body").width());
+	
+	if ($("body").height() > 1185)
+		{
+			$("#slider-idx ul li").height($("body").height() - 265);
+		}
+		else
+		{
+			$("#slider-idx ul li").height(920);
+		}
+		
+	// Слайдер
+	$("#slider-idx ul").carouFredSel({
+		circular: true,
+		infinite: false,
+		auto    : false,
+		scroll  : {
+			items   : 1
+		},
+		prev    : {
+			button  : "#si-prev"
+		},
+		next    : {
+			button  : "#si-next"
+		},
+		pagination  : {
+			container       : "#paging",
+			anchorBuilder   : function( nr, item ) {
+				var pagingTitle = $(".si-title", item).html();
+				return '<span><a href="#">' + pagingTitle + '</a></span>';
+			}
+		}
+	});
+}
+
 $(document).ready(function(){
 	$(".clients-list li>a").click(function(){
 		$(this).parent().find("div").show().parent().siblings("li").find("div").hide();

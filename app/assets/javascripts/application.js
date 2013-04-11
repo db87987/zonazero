@@ -16,49 +16,13 @@
 //= require ckeditor/init
 //= require_self
 
- $(document).ready(function(){
-   sliderInit();
-   
-   $(window).resize(function() {
-    sliderInit();
-   });
-  });
-
-function resizeContainer(){
-	var needHeight = $("#order-block").height() + 175;
-	if(needHeight > $("#container").height()){
-		$("#container").height(needHeight);
-	}
-}
-
-function sliderInit(){
-	// Перед инициализацией надо задать ширину элементов карусели
-	// равной ширине окна
-	$("#slider-idx ul li").width($("body").width());
-		
-	// Слайдер
-	$("#slider-idx ul").carouFredSel({
-		circular: true,
-		infinite: false,
-		auto    : false,
-		scroll  : {
-			items   : 1
-		},
-		prev    : {
-			button  : "#si-prev"
-		},
-		next    : {
-			button  : "#si-next"
-		},
-		pagination  : {
-			container       : "#paging",
-			anchorBuilder   : function( nr, item ) {
-				var pagingTitle = $(".si-title", item).html();
-				return '<span><a href="#">' + pagingTitle + '</a></span>';
-			}
-		}
+$(document).ready(function(){
+	sliderInit();
+	
+	$(window).resize(function() {
+		sliderInit();
 	});
-}
+});
 
 // Делает пункт меню активным
 $(function(){

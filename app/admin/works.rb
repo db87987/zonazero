@@ -1,8 +1,10 @@
 ActiveAdmin.register Work, { :sort_order => :id_asc } do
+  config.sort_order = 'sn_asc'
   config.batch_actions = false
   config.clear_sidebar_sections!
   
    index do 
+    column :sn
     column :title
     column :front_show
     
@@ -12,6 +14,7 @@ ActiveAdmin.register Work, { :sort_order => :id_asc } do
   form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs "Details" do
     f.input :title
+    f.input :sn
     f.input :description, :as => :ckeditor, :label => false
     f.input :logo1, :as => :file, :hint => ( f.object.new_record? || !f.object.logo1? ) ? nil : image_tag(f.object.logo1.url(:small))
     unless f.object.new_record? || !f.object.logo1?
@@ -29,6 +32,7 @@ ActiveAdmin.register Work, { :sort_order => :id_asc } do
   
   show do
         attributes_table do
+          row :sn
           row :title
           row :description do
             sanitize(work.description)
