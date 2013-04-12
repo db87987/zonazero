@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130411134632) do
+ActiveRecord::Schema.define(:version => 20130412153342) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -105,6 +105,17 @@ ActiveRecord::Schema.define(:version => 20130411134632) do
     t.datetime "logo2_updated_at"
   end
 
+  create_table "friendly_id_slugs", :force => true do |t|
+    t.string   "slug",                         :null => false
+    t.integer  "sluggable_id",                 :null => false
+    t.string   "sluggable_type", :limit => 40
+    t.datetime "created_at"
+  end
+
+  add_index "friendly_id_slugs", ["slug", "sluggable_type"], :name => "index_friendly_id_slugs_on_slug_and_sluggable_type", :unique => true
+  add_index "friendly_id_slugs", ["sluggable_id"], :name => "index_friendly_id_slugs_on_sluggable_id"
+  add_index "friendly_id_slugs", ["sluggable_type"], :name => "index_friendly_id_slugs_on_sluggable_type"
+
   create_table "messageoptions", :force => true do |t|
     t.integer  "message_id"
     t.integer  "option_id"
@@ -149,7 +160,10 @@ ActiveRecord::Schema.define(:version => 20130411134632) do
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "slug"
   end
+
+  add_index "pages", ["slug"], :name => "index_pages_on_slug"
 
   create_table "users", :force => true do |t|
     t.datetime "created_at", :null => false
