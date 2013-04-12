@@ -17,6 +17,8 @@ gem "ckeditor", "~> 4.0.4"
 
 gem 'sqlite3'
 
+gem 'mercury-rails'
+
 
 # Gems used only for assets and not required
 # in production environments by default.

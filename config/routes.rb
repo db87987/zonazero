@@ -1,7 +1,11 @@
 Zonazero::Application.routes.draw do
   
+  mount Mercury::Engine => '/'
+
   resources :messages
-  resources :pages
+  resources :pages do
+    member { post :mercury_update }
+  end
   resources :awards
   resources :works
   resources :clients
