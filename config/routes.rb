@@ -3,6 +3,9 @@ Zonazero::Application.routes.draw do
   mount Mercury::Engine => '/'
 
   resources :messages
+  
+    get ':id', to: 'pages#show', as: :page
+  
   resources :pages do
     member { post :mercury_update }
   end
@@ -21,5 +24,5 @@ Zonazero::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   mount Ckeditor::Engine => '/ckeditor'
   ActiveAdmin.routes(self)
-  
+
 end
