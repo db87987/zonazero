@@ -22,7 +22,9 @@
 					<%= @page.description.html_safe %>
 					</div>
 				</div>
+				<% if admin_user_signed_in? %>
 				<%= link_to "Редактировать страницу", "/editor" + request.path, id: "edit_link", data: {save_url: mercury_update_page_path(@page)} %>
+				<% end %>
 			</div>
 		</div>
 		
