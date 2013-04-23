@@ -8,6 +8,7 @@ gem 'unicorn'
 gem 'execjs'
 gem 'therubyracer', '~> 0.10.2' 
 
+gem 'rack-mini-profiler'
 
 gem "activeadmin", "~> 0.6.0"
 gem "ckeditor", "~> 4.0.4"
