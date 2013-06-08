@@ -7,6 +7,7 @@ set :user, "user"
 set :application, "zonazero"
 set :deploy_to, "/home/user/projects/#{application}"
 set :deploy_via, :remote_cache
+set :use_sudo, false
 
 set :scm, "git"
 set :repository, "git@github.com:babrovka/zonazero.git"
