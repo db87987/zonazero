@@ -24,5 +24,5 @@ task :copy_database_config do
    run "cp #{db_config} #{latest_release}/config/database.yml"
 end
 
-before "deploy:assets:precompile", "deploy:copy_database_config"
+before "deploy:assets:precompile", "copy_database_config"
 after "deploy", "deploy:cleanup"
