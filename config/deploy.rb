@@ -18,10 +18,11 @@ set :branch, "master"
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
-after "deploy:update_code", :copy_database_config
- task :copy_database_config, roles => :app do
+
+task :copy_database_config, roles => :app do
    db_config = "#{shared_path}/database.yml"
    run "cp #{db_config} #{latest_release}/config/database.yml"
 end
 
+before "deploy:assets:precompile", "deploy:copy_database_config"
 after "deploy", "deploy:cleanup"
