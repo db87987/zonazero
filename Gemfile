@@ -31,5 +31,6 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 group :production do
   gem 'mysql2'
+  gem 'thin'
 end
 
