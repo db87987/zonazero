@@ -1,0 +1,10 @@
+<div id="left">
+	<ul class="l-menu">	
+		<%= content_tag :li, :class => ('active' if action?("about"))  do %>
+		  <%= link_to "про зеро", about_path %>
+		<% end %>
+		<%= content_tag :li, :class => ('active' if controller?("clients")) do %>
+		  <%= link_to "клиенты", clients_path %>
+		<% end %>
+	</ul>
+</div>

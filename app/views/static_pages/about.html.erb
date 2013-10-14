@@ -3,13 +3,8 @@
 	<div id="container">
 		<%= render 'layouts/header' %>
 		<div id="middle">
-			<div id="left">
-				<ul class="l-menu">	
-					<li class="active"><%= link_to "про зеро", about_path %></li>
-					<li><%= link_to "клиенты", clients_path %></li>
-					<li><%= link_to "пресс-кит", kit_path %></li>
-				</ul>
-			</div>
+		
+		<%= render 'shared/left_menu' %>
 
 			<div id="right">
 				<div class="h1">
