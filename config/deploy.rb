@@ -37,5 +37,20 @@ namespace :deploy do
   end
 end
 
+namespace(:thin) do
+  task :stop do
+    run "thin stop -C /etc/thin/#{application}.yml"
+   end
+  
+  task :start do
+    run "thin start -C /etc/thin/#{application}.yml"
+  end
+
+  task :restart do
+    run "thin restart -C /etc/thin/#{application}.yml"
+  end
+end
+
+
 before "deploy:assets:precompile", "copy_database_config"
 after "deploy", "deploy:cleanup"
