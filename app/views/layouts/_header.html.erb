@@ -4,15 +4,19 @@
 	<%= link_to "На главную", root_path, class: "logo" %>
 	
 	<ul>
-		<li>
+		<%= content_tag :li, :class => ('active' if action?("about"))  do %>
 			<%= link_to "компания", about_path %>
 			<ul>
 				<li><%= link_to "про зеро", about_path %></li>
 				<li><%= link_to "клиенты", clients_path %></li>
 			</ul>
-		</li>
-		<li><%= link_to "Работы", works_path %></li>
-		<li><%= link_to "Награды", awards_path %></li>
+		<% end %>
+		<%= content_tag :li, :class => ('active' if controller?("works") && action?("index"))  do %>
+		  <%= link_to "Работы", works_path %>
+		<% end %>
+		<%= content_tag :li, :class => ('active' if controller?("awards"))  do %>
+		<%= link_to "Награды", awards_path %>
+		<% end %>
 		<li><%= link_to "Контакты", contact_path %></li>
 		<li><a href="#" class="order-link"><span>Заказать</span></a></li>
 	</ul>

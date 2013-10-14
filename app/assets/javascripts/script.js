@@ -140,7 +140,7 @@ $(document).ready(function(){
 	})
 	
 	// Вернуться назад со ссылки "Контакты" в контактах
-	$(".a-close").click(function(){
+	$(".ob-close").click(function(){
         parent.history.back();
 		
         return false;
