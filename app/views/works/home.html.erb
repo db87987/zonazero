@@ -8,10 +8,8 @@
 				<li>
 					<%= link_to "компания", about_path %>
 					<ul>
-							<% Page.all.each do |page| %>
-							<li><%= link_to page.title, page %></li>
-							<% end %>
-							<li><%= link_to "Клиенты", clients_path %></li>
+						<li><%= link_to "про зеро", about_path %></li>
+						<li><%= link_to "клиенты", clients_path %></li>
 					</ul>
 				</li>
 				<li><%= link_to "Работы", works_path %></li>
