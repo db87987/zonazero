@@ -7,7 +7,7 @@ gem 'capistrano'
 gem 'rvm-capistrano'
 gem 'unicorn'
 gem 'execjs'
-gem 'therubyracer', '~> 0.10.2' 
+gem 'therubyracer'
 
 gem 'rack-mini-profiler'
 
